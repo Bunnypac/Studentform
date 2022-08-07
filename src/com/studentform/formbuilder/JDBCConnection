@@ -1,0 +1,15 @@
+public class JDBCConnection {
+ 
+     public static Connection connect() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/StudentInfo","postgres","qwerty");
+            return con;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    private JDBCConnection() {}
+
+}

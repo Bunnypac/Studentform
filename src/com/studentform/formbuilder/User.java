@@ -1,8 +1,7 @@
 package com.studentform.formbuilder;
 
-public class user {
+public class User {
     int id;
     String name;
     int age;
-
 }

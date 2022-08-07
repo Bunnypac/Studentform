@@ -2,27 +2,17 @@ package com.studentform.formbuilder;
 
 import java.sql.*;
 
-public class userDao {
+public class UserRepository {
     Connection con=null;
 
-    public void connect() {
-        try {
-            Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/StudentInfo","postgres","qwerty");
+   
 
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-
-    }
-
-    public user getUser(int id)
+    public User getUser(int id)
     {
         try {
-        user s = new user();
+        User s = new User();
         s.id=id;
-        String query="select name from userdata where id="+id;
+        String query="select name from userdata where id="+;
 
             Statement st =con.createStatement();
             ResultSet rs=st.executeQuery(query);
@@ -41,7 +31,7 @@ public class userDao {
     }
 
 
-    public void addUser(user s) {
+    public void addUser(User s) {
         String query="insert into userdata values (?,?)";
         try {
             PreparedStatement ps =con.prepareStatement(query);
