@@ -1,4 +1,6 @@
-package formbuilder;
+package formbuilder.pojo;
+
+import formbuilder.dao.UserDAO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

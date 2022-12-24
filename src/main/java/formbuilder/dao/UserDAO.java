@@ -1,4 +1,6 @@
-package formbuilder;
+package formbuilder.dao;
+
+import formbuilder.pojo.User;
 
 import java.util.Objects;
 

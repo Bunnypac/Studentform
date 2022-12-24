@@ -1,4 +1,4 @@
-package formbuilder;
+package formbuilder.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ public class JDBCConnection {
  
      public static Connection connect() throws ClassNotFoundException, SQLException {
             Class.forName("org.postgresql.Driver");
-            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/student_info","postgres","qwerty");
+            return DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres","postgres","admin");
     }
 
     private JDBCConnection() {}
